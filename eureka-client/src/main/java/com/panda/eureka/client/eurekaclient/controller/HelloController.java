@@ -2,7 +2,6 @@ package com.panda.eureka.client.eurekaclient.controller;
 
 import com.panda.eureka.client.eurekaclient.domain.User;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,7 +20,7 @@ public class HelloController {
 
 
     @RequestMapping("/userInfo")
-    public User userInfo(@RequestParam("name") String name, @RequestParam("age")Integer age){
+    public User userInfo(String name,Integer age){
         User user = new User();
         user.setName(name);
         user.setAge(age);
